@@ -80,24 +80,37 @@ section h3 {
   border-top: 1px dashed #ddd;
 }
 
-.participants ul {
+.participants-list {
   list-style-type: none;
   margin-top: 8px;
-  padding-left: 15px;
+  padding-left: 0;
 }
 
-.participants li {
+.participants-list li {
   color: #666;
   font-size: 0.9em;
   margin-bottom: 4px;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.participants li::before {
-  content: "•";
-  color: #1a237e;
-  position: absolute;
-  left: -15px;
+/* Remove bullet points */
+.participants-list li::before {
+  content: none;
+}
+
+.delete-participant {
+  color: #c62828;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 1.1em;
+  transition: color 0.2s;
+  user-select: none;
+}
+.delete-participant:hover {
+  color: #a31515;
 }
 
 .no-participants {
